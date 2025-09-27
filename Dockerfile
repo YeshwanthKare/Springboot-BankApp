@@ -11,4 +11,4 @@ FROM eclipse-temurin:17-jdk AS runtime
 COPY --from=builder /src/target/*.jar /src/target/bankapp.jar
 
 EXPOSE 8080
-CMD ["java", "-jar", "bankapp.jar"]
+ENTRYPOINT ["java", "-jar", "bankapp.jar"]
