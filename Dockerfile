@@ -6,7 +6,7 @@ COPY . .
 RUN mvn clean install -DskipTests
 
 # ------------- Stage 2 -------------- #
-FROM eclipse-temurin:17-jdk AS runtime   
+FROM eclipse-temurin:17-jdk AS runtime  
 
 COPY --from=builder /src/target/*.jar /src/target/bankapp.jar
 
